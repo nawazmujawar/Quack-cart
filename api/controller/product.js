@@ -15,7 +15,7 @@ exports.product_get_all = (req, res, next) => {
                         price: doc.price,
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:3000/products/' + doc._id
+                            url: 'https://quackcart-api.herokuapp.com/products/' + doc._id
                         }
                     }
                 })
@@ -46,7 +46,7 @@ exports.product_post = (req, res, next) => {
                 price: doc.price,
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/products/'
+                    url: 'https://quackcart-api.herokuapp.com/products/'
                 }
             }
         })
@@ -70,7 +70,7 @@ exports.product_get_single = (req, res, next) => {
                 price: doc.price,
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/products/'
+                    url: 'https://quackcart-api.herokuapp.com/products/'
                 }
             })
         })
@@ -97,7 +97,7 @@ exports.product_patch = (req, res, next) => {
 
                     request: {
                         type: 'GET',
-                        url: 'http://localhost:3000/products/' + id
+                        url: 'https://quackcart-api.herokuapp.com/products/' + id
                     }
                 }
             }
@@ -119,7 +119,7 @@ exports.product_delete = (req, res, next) => {
                 message: "Successfully Deleted!",
                 request: {
                     type: 'POST',
-                    url: 'http://localhost:3000/products/',
+                    url: 'https://quackcart-api.herokuapp.com/products/',
                     body: { name: "String", price: "Number" }
                 }
             })

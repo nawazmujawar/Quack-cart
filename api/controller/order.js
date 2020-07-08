@@ -17,7 +17,7 @@ exports.order_get_all = (req, res, next) => {
                         quantity: singleOrder.quantity,
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:3000/orders/' + singleOrder._id
+                            url: 'https://quackcart-api.herokuapp.com/orders/' + singleOrder._id
                         }
                     }
                 })
@@ -59,7 +59,7 @@ exports.order_post = (req, res, next) => {
                     quantity: result.quantity,
                     request: {
                         type: 'GET',
-                        url: "http://localhost:3000/orders/"
+                        url: "https://quackcart-api.herokuapp.com/orders/"
                     }
                 }
             })
@@ -84,7 +84,7 @@ exports.order_get_single = (req, res, next) => {
                 quantity: result.quantity,
                 request: {
                     type: 'GET',
-                    url: "http://localhost:3000/orders/"
+                    url: "https://quackcart-api.herokuapp.com/orders/"
                 }
             })
         })
@@ -104,7 +104,7 @@ exports.order_delete = (req, res, next) => {
                 message: "Order deleted successfully!",
                 request: {
                     type: 'POST',
-                    url: "http://localhost:3000/orders/",
+                    url: "https://quackcart-api.herokuapp.com/orders/",
                     body: { productId: "ID", quantity: "Number" }
                 }
             })
