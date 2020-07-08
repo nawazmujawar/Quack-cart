@@ -8,7 +8,7 @@ mongoose.connect("mongodb+srv://nawaz:" + process.env.MONGO_ATLAS_PW + "@rest-ap
     useNewUrlParser: true, useUnifiedTopology: true
 })
 
-const morgan = require("morgan")
+//const morgan = require("morgan")
 const bodyParser = require("body-parser")
 
 
@@ -20,7 +20,7 @@ const userRoutes = require("./api/routes/users")
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use(morgan('dev'))
+//app.use(morgan('dev'))
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
